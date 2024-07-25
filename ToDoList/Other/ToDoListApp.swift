@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct ToDoListApp: App {
+    init() {
+        FirebaseManager.configure()
+        Configurator.shared.setup()
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }
